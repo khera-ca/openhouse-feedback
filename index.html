@@ -40,14 +40,11 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;bac
 .f:last-child{margin-bottom:0;}
 .fl{display:block;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-mid);margin-bottom:8px;}
 .req{color:var(--gold);}
-input[type=text],input[type=email],input[type=tel],select,textarea{width:100%;padding:13px 16px;border:1px solid var(--border-strong);border-radius:var(--r-md);background:rgba(255,255,255,.55);font-family:var(--fb);font-size:15px;color:var(--ink);appearance:none;}
+input[type=text],select,textarea{width:100%;padding:13px 16px;border:1px solid var(--border-strong);border-radius:var(--r-md);background:rgba(255,255,255,.55);font-family:var(--fb);font-size:15px;color:var(--ink);appearance:none;}
 [data-theme="dark"] input,[data-theme="dark"] select,[data-theme="dark"] textarea{background:rgba(40,37,20,.55);}
 input::placeholder,textarea::placeholder{color:var(--ink-faint);font-weight:300;}
 input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,168,76,.14);background:rgba(255,255,255,.92);}
 select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%238a8372' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:42px;}
-.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-@media(max-width:420px){.g2{grid-template-columns:1fr;}}
-.hint{font-size:11.5px;color:var(--ink-light);margin-top:6px;line-height:1.5;}
 .cond{display:none;margin-top:16px;}
 .cond.vis{display:block;}
 .cond-inner{background:rgba(201,168,76,.05);border:1px solid var(--border);border-radius:var(--r-lg);padding:20px;}
@@ -127,7 +124,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
 
 <div class="f">
 <label class="fl" for="home_want">Would this home work for you? <span class="req">*</span></label>
-<select id="home_want" name="home_want" required>
+<select id="home_want" required>
 <option value="">— Select —</option>
 <option value="Perfect">Perfect</option>
 <option value="Need changes">Need changes</option>
@@ -139,14 +136,14 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
 <div class="cond-inner">
 <div class="f" style="margin-bottom:0;">
 <label class="fl" for="need_change">What would need to change to make this home perfect?</label>
-<textarea id="need_change" name="need_change" rows="4" placeholder="Tell me what would make it a fit..."></textarea>
+<textarea id="need_change" rows="4" placeholder="Tell me what would make it a fit..."></textarea>
 </div>
 </div>
 </div>
 
 <div class="f">
 <label class="fl" for="location">Preferred Area / Location <span class="req">*</span></label>
-<select id="location" name="location" required>
+<select id="location" required>
 <option value="">— Select —</option>
 <option>Vaughan</option>
 <option>Newmarket</option>
@@ -162,14 +159,14 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
 <div class="cond-inner">
 <div class="f" style="margin-bottom:0;">
 <label class="fl" for="other_location">Other location</label>
-<input type="text" id="other_location" name="other_location" placeholder="Type the area you want">
+<input type="text" id="other_location" placeholder="Type the area you want">
 </div>
 </div>
 </div>
 
 <div class="f">
 <label class="fl" for="home_type">Home Type <span class="req">*</span></label>
-<select id="home_type" name="home_type" required>
+<select id="home_type" required>
 <option value="">— Select —</option>
 <option value="Freehold">Freehold</option>
 <option value="Condo">Condo</option>
@@ -181,7 +178,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
 <div class="grid-2">
 <div class="f">
 <label class="fl" for="fh_style">Style</label>
-<select id="fh_style" name="fh_style">
+<select id="fh_style">
 <option>No Preference</option>
 <option>Detached</option>
 <option>Semi</option>
@@ -190,7 +187,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
 </div>
 <div class="f">
 <label class="fl" for="fh_beds">Beds</label>
-<select id="fh_beds" name="fh_beds">
+<select id="fh_beds">
 <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
 </select>
 </div>
@@ -198,13 +195,13 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
 <div class="grid-2">
 <div class="f">
 <label class="fl" for="fh_baths">Washrooms</label>
-<select id="fh_baths" name="fh_baths">
+<select id="fh_baths">
 <option>1</option><option>2</option><option>3</option><option>4</option>
 </select>
 </div>
 <div class="f">
 <label class="fl" for="fh_bsmt">Basement</label>
-<select id="fh_bsmt" name="fh_bsmt">
+<select id="fh_bsmt">
 <option>Finished</option>
 <option>Apartment suite</option>
 <option>No preference</option>
@@ -219,14 +216,14 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
 <div class="grid-2">
 <div class="f">
 <label class="fl" for="co_type">Type</label>
-<select id="co_type" name="co_type">
+<select id="co_type">
 <option>Townhouse</option>
 <option>Apartment</option>
 </select>
 </div>
 <div class="f">
 <label class="fl" for="co_beds">Beds</label>
-<select id="co_beds" name="co_beds">
+<select id="co_beds">
 <option>1</option><option>2</option><option>3</option><option>4</option>
 </select>
 </div>
@@ -234,7 +231,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
 <div class="grid-2">
 <div class="f">
 <label class="fl" for="co_baths">Washrooms</label>
-<select id="co_baths" name="co_baths">
+<select id="co_baths">
 <option>1</option><option>2</option>
 </select>
 </div>
@@ -245,7 +242,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
 <div class="grid-2">
 <div class="f">
 <label class="fl" for="selling_first">Selling First?</label>
-<select id="selling_first" name="selling_first">
+<select id="selling_first">
 <option value="">— Select —</option>
 <option value="Yes">Yes</option>
 <option value="No">No</option>
@@ -253,7 +250,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
 </div>
 <div class="f">
 <label class="fl" for="timeline">Timeline</label>
-<select id="timeline" name="timeline">
+<select id="timeline">
 <option value="">— Select —</option>
 <option>0-3 months</option>
 <option>3-6 months</option>
@@ -273,7 +270,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
 <div class="success" id="successWrap">
 <div class="success-card">
 <h2>Thank You</h2>
-<p>Your feedback has been received. I’ll use it to better understand what you are looking for and follow up appropriately.</p>
+<p>Your feedback has been received.</p>
 </div>
 </div>
 
@@ -367,11 +364,6 @@ async function submitFeedback(e){
   if (!$("home_type").value) return alert("Please choose a home type.");
 
   const now = new Date();
-  const buyArea = deriveBuyArea($("location").value, $("other_location").value.trim());
-  const urgency = deriveUrgency($("timeline").value);
-  const stage = deriveStage($("home_want").value, $("timeline").value);
-  const leadNurture = deriveLeadNurture($("home_want").value, $("timeline").value);
-
   const payload = {
     submission_type: "feedback",
     lead_id: params.lead_id,
@@ -383,7 +375,7 @@ async function submitFeedback(e){
     need_change: $("need_change").value.trim(),
     location: $("location").value,
     other_location: $("other_location").value.trim(),
-    buy_area: buyArea,
+    buy_area: deriveBuyArea($("location").value, $("other_location").value.trim()),
     home_type: $("home_type").value,
     fh_style: $("fh_style").value,
     fh_beds: $("fh_beds").value,
@@ -394,9 +386,9 @@ async function submitFeedback(e){
     co_baths: $("co_baths").value,
     selling_first: $("selling_first").value,
     timeframe: $("timeline").value,
-    urgency,
-    stage,
-    lead_nurture: leadNurture,
+    urgency: deriveUrgency($("timeline").value),
+    stage: deriveStage($("home_want").value, $("timeline").value),
+    lead_nurture: deriveLeadNurture($("home_want").value, $("timeline").value),
     feedback_submitted: "Yes",
     feedback_date: now.toISOString(),
     updated_at: now.toISOString(),
@@ -410,7 +402,10 @@ async function submitFeedback(e){
   try {
     const res = await fetch(WEBHOOK_URL, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      redirect: "follow",
+      headers: {
+        "Content-Type": "text/plain;charset=utf-8"
+      },
       body: JSON.stringify(payload)
     });
 
@@ -431,7 +426,6 @@ document.addEventListener("DOMContentLoaded", () => {
   setTheme();
   fillVisitor();
   toggleSections();
-
   $("home_want").addEventListener("change", toggleSections);
   $("location").addEventListener("change", toggleSections);
   $("home_type").addEventListener("change", toggleSections);
